@@ -5,8 +5,8 @@
 #
 # purpose:  read journal RSS feeds and tweet selected entries
 # license:  MIT License
-# author:   François-Xavier Coudert
-# e-mail:   fxcoudert@gmail.com
+# author:   adapted by Margaux Zaffran from François-Xavier Coudert
+# e-mail:   margauxzaffran@gmail.com
 #
 
 import imghdr
@@ -27,14 +27,9 @@ import tweepy
 
 # This is the regular expression that selects the papers of interest
 regex = re.compile(r"""
-  (   \b(MOF|MOFs|COF|COFs|ZIF|ZIFs)\b
-    | metal.organic.framework
-    | covalent.organic.framework
-    | metal–organic.framework
-    | covalent–organic.framework
-    | imidazolate.framework
-    | porous.coordination.polymer
-    | framework.material
+  (   electricity.price
+    | time.series.forecasting
+    | electricity.price.forecasting
   )
   """, re.IGNORECASE | re.VERBOSE)
 
